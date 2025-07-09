@@ -67,20 +67,37 @@ const impiegatoValido: Impiegato = {
 
 console.log(impiegatoValido);
 
-
-
-
-
-
 // Crea un’interfaccia UtenteBase con:
 // id: number (readonly)
 // nomeUtente: string
 // Crea un’interfaccia UtentePremium che estende UtenteBase e aggiunge:
 // livelloUtente: "gold" | "silver" | "bronze" (opzionale)
-// Crea due oggetti UtentePremiun: uno con membership e uno senza.
+// Crea due oggetti UtentePremiun: uno con livelloUtente e uno senza.
 
 
+interface UtenteBase {
+    readonly id: number,
+    nomeUtente: string
+}
 
+interface UtentePremium extends UtenteBase {
+    livelloUtente?: "gold" | "silver" | "bronze"
+}
+
+const UtentePremiumUno: UtentePremium = {
+    id: 2,
+    nomeUtente: "Giderman",
+    livelloUtente: "silver"
+}
+
+console.log(UtentePremiumUno);
+
+const UtentePremiumDue: UtentePremium = {
+    id: 4,
+    nomeUtente: "Saix33",
+}
+
+console.log(UtentePremiumDue);
 
 // Crea un’interfaccia Libro con:
 // titolo: string
