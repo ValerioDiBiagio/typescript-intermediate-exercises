@@ -18,9 +18,17 @@
 // calcola area(5)
 // stampa PI
 
-import { PI } from "./utils/main";
-import area from "./utils/main";
+// import { PI } from "./utils/main";
+// import area from "./utils/main";
 
-console.log(area(5));
-console.log(PI);
+// console.log(area(5));
+// console.log(PI);
+
+
+
+// importa capitalize da main.ts con alias cap
+// stampare cap("ciao") → "Ciao"
+
+import { capitalize as cup } from "./utils/main";
+console.log(cup("ciao"));
 
