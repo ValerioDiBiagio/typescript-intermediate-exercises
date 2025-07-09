@@ -32,6 +32,17 @@ console.log(secondaPersona);
 // Prova a modificare id e verifica che TypeScript segnali un errore.
 
 
+interface Prodotto {
+    readonly id: number,
+    nome: string
+}
+
+const prodottoValido: Prodotto = {
+    id: 1,
+    nome: "ps5"
+}
+
+// prodottoValido.id = 2;
 
 
 // Crea un’interfaccia Persona con:
