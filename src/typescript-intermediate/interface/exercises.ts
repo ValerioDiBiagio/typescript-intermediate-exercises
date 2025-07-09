@@ -109,6 +109,33 @@ console.log(UtentePremiumDue);
 // Chiama la funzione con due oggetti: uno con l’anno e uno senza.
 
 
+interface Libro {
+    titolo: string,
+    autore: string,
+    annoPubblicazione?: number
+}
+
+function stampaLibro(libro: Libro): void {
+    console.log(libro.titolo, libro.autore);
+    if (libro.annoPubblicazione) {
+        console.log(libro.titolo, libro.autore, libro.annoPubblicazione)
+    }
+
+}
+
+stampaLibro({
+    titolo: "La divina commedia",
+    autore: "Dante Alighieri",
+    annoPubblicazione: 1321
+})
+
+stampaLibro({
+    titolo: "I promessi sposi",
+    autore: "Alessandro Manzoni",
+})
+
+
+
 
 
 
