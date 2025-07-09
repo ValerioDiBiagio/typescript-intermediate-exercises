@@ -32,6 +32,13 @@
 // EX 4
 
 
-export function capitalize(text: string): string {
-    return text.charAt(0).toUpperCase() + text.slice(1);
+// export function capitalize(text: string): string {
+//     return text.charAt(0).toUpperCase() + text.slice(1);
+// }
+
+
+// EX 5
+
+export default function formatDate(date: Date): string {
+    return date.toISOString().split("T")[0];
 }

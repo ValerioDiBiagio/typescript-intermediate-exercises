@@ -29,6 +29,14 @@
 // importa capitalize da main.ts con alias cap
 // stampare cap("ciao") → "Ciao"
 
-import { capitalize as cup } from "./utils/main";
-console.log(cup("ciao"));
+// import { capitalize as cup } from "./utils/main";
+// console.log(cup("ciao"));
+
+
+
+// importa formatDate da main.ts come alias fmt
+// // - stampa fmt(new Date("2025-07-01")) → "2025-07-01"
+
+import fmt from "./utils/main";
+console.log(fmt(new Date("2025-07-01")));
 
