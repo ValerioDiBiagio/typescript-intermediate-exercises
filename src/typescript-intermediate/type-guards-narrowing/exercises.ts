@@ -106,7 +106,6 @@ function isString(value: unknown): value is string {
 
 }
 
-
 console.log(isString(4));
 console.log(isString("Ciao"));
 
@@ -114,8 +113,15 @@ console.log(isString("Ciao"));
 // Scrivi una funzione isNumberArray che prende un valore di tipo unknown e ritorna value is number[].
 // Deve restituire true solo se il valore è un array e tutti gli elementi sono numeri.
 
+function isNumberArray(v: unknown): v is number[] {
+    if (!Array.isArray(v)) {
+        return false
+    }
+    return v.every((element): element is number => typeof element === "number")
+}
 
-
+console.log(isNumberArray([2, 3, 4]));
+console.log(isNumberArray([2, "tre", 4]));
 
 
 // Definisci il tipo Person con una proprietà name stringa.
