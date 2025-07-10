@@ -56,3 +56,21 @@ stampaStringaOArray("Ciao, come stai?");
 stampaStringaOArray(["Mela", "Pera", "Lampone"]);
 
 
+// Scrivi una funzione chiamata valoreSchermo che riceve un parametro input di tipo number | null.
+// Se input è null, stampa "Nessun valore".
+// Se è un numero, stampa "Valore: " seguito dal numero.
+
+
+function valoreSchermo(input: number | null) {
+    if (input === null) {
+        console.log("Nessun valore");
+    } else {
+        console.log(`Valore: ${input}`);
+    }
+}
+
+
+valoreSchermo(null);
+valoreSchermo(5);
+
+
