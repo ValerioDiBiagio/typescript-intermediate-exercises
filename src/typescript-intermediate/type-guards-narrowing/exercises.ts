@@ -142,3 +142,27 @@ function isPerson(data: unknown): data is Person {
 
 console.log(isPerson({ name: "Alice" }));
 console.log(isPerson({ age: 25 }));
+
+
+// Definisci un tipo Car con due proprietà:
+// make di tipo string
+// year di tipo number
+// Scrivi una funzione isCar che prende un valore di tipo unknown e ritorna value is Car.
+// La funzione deve verificare che il valore sia un oggetto non nullo, che abbia le proprietà model (stringa) e year (numero).
+
+interface Car {
+    model: string,
+    year: number
+}
+
+function isCar(val: unknown): val is Car {
+    return typeof val === "object" &&
+        val !== null &&
+        "model" in val &&
+        typeof val.model === "string" &&
+        "year" in val &&
+        typeof val.year === "number"
+}
+
+console.log(isCar({ model: "Opel", year: 2008 }));
+console.log(isCar({ year: "2008" }));
