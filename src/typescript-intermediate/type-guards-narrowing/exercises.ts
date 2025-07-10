@@ -166,3 +166,41 @@ function isCar(val: unknown): val is Car {
 
 console.log(isCar({ model: "Opel", year: 2008 }));
 console.log(isCar({ year: "2008" }));
+
+
+// Definisci un tipo Animal con proprietà:
+// species di tipo string
+// age di tipo number
+// Scrivi una funzione checkAnimal che prende un parametro value: unknown e restituisce value is Animal verificando se value ha le proprietà giuste.
+// Poi scrivi una funzione printAnimalInfo che prende un parametro data: unknown.
+// Se data è un Animal (usando la type guard checkAnimal), stampa "Specie: ... Età: ...".
+// Altrimenti stampa "Non è un animale valido".
+
+interface Animal {
+    species: string,
+    age: number
+}
+
+function checkAnimal(valore: unknown): valore is Animal {
+    return typeof valore === "object" &&
+        valore !== null &&
+        "species" in valore &&
+        typeof valore.species === "string" &&
+        "age" in valore &&
+        typeof valore.age === "number"
+
+}
+
+function printAnimalInfo(data: unknown) {
+    if (checkAnimal(data)) {
+        console.log(`Specie: ${data.species}, Età: ${data.age}`)
+    } else {
+        console.log("Non è un animale valido")
+    }
+}
+
+console.log(checkAnimal({ species: "Leone", age: 5 }));
+console.log(checkAnimal({ species: "Tigre", age: "due" }));
+
+printAnimalInfo({ species: "Pappagallo", age: 2 });
+printAnimalInfo({ specie: "Elefante", anni: 10 });
