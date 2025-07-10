@@ -44,4 +44,15 @@ controllaTipo(34);
 // Se x è un array di stringhe, stampa "Array di stringhe con lunghezza: " seguito dalla lunghezza dell’array.
 
 
+function stampaStringaOArray(x: string | string[]) {
+    if (typeof x === "string") {
+        console.log(`Singola stringa: ${x}`);
+    } else if (Array.isArray(x)) {
+        console.log(`Array di stringhe con lunghezza: ${x.length}`);
+    }
+}
+
+stampaStringaOArray("Ciao, come stai?");
+stampaStringaOArray(["Mela", "Pera", "Lampone"]);
+
 
