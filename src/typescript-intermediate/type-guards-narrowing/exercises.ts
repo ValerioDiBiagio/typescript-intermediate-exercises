@@ -74,3 +74,25 @@ valoreSchermo(null);
 valoreSchermo(5);
 
 
+// Scrivi una funzione chiamata processData che riceve un parametro data di tipo boolean | number[].
+// Se data è un booleano, stampa "Attivo" se è true, o "Inattivo" se è false.
+// Se è un array di numeri, stampa "Somma: " seguito dalla somma di tutti i numeri nell’array.
+
+
+function processData(data: boolean | number[]) {
+    if (typeof data === "boolean") {
+        if (data === true) {
+            console.log("Attivo");
+        } else {
+            console.log("Inattivo");
+        }
+    } else if (Array.isArray(data)) {
+        const sum = data.reduce((tot, valoreAttuale) => tot + valoreAttuale, 0);
+        console.log(`Somma: ${sum}`);
+    }
+}
+
+
+processData(true);
+processData(false);
+processData([2, 4, 6, 8]);
