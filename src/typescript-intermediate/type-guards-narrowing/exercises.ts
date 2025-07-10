@@ -96,3 +96,28 @@ function processData(data: boolean | number[]) {
 processData(true);
 processData(false);
 processData([2, 4, 6, 8]);
+
+
+// Scrivi una funzione isString che prende un valore di tipo unknown e ritorna value is string.
+// La funzione deve restituire true solo se il valore è una stringa.
+
+function isString(value: unknown): value is string {
+    return typeof value === "string";
+
+}
+
+
+console.log(isString(4));
+console.log(isString("Ciao"));
+
+
+// Scrivi una funzione isNumberArray che prende un valore di tipo unknown e ritorna value is number[].
+// Deve restituire true solo se il valore è un array e tutti gli elementi sono numeri.
+
+
+
+
+
+// Definisci il tipo Person con una proprietà name stringa.
+// Scrivi una funzione isPerson che prende un valore di tipo unknown e ritorna value is Person.
+// La funzione deve verificare che il valore sia un oggetto non nullo con una proprietà name di tipo stringa.
