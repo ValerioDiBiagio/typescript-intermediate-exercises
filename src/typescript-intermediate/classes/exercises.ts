@@ -174,3 +174,35 @@
 // Aggiungi due metodi:
 // getTitolo() che restituisce il titolo del libro.
 // setTitolo(nuovoTitolo: string) che aggiorna il titolo.
+
+{
+
+    class Libro {
+        titolo: string
+
+
+        constructor(titolo: string) {
+            this.titolo = titolo
+        }
+
+
+        getTitolo() {
+            return this.titolo
+        }
+
+        setTitolo(nuovoTitolo: string): void {
+            this.titolo = nuovoTitolo
+
+        }
+
+
+    }
+
+    const primoLibro = new Libro("Il Signore degli Anelli");
+    primoLibro.getTitolo()
+    console.log("Il primo libro è:", primoLibro.getTitolo())
+
+    primoLibro.setTitolo("Harry Potter")
+    console.log("Il secondo libro è:", primoLibro.getTitolo())
+
+}
