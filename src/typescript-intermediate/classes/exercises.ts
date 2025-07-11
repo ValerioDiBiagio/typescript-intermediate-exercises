@@ -60,6 +60,37 @@
 
 }
 
+
+// Crea una classe che rappresenta un’automobile.
+// La classe si chiama Macchina
+// Deve avere due proprietà:
+// marca (marca dell’auto, es. "Fiat")
+// anno (anno di immatricolazione, es. 2020)
+// Aggiungi un metodo info() che stampa:
+//  "Questa auto è una {marca} del {anno}"
+
+
+{
+    class Macchina {
+        marca: string;
+        anno: number
+
+
+        constructor(marca: string, anno: number) {
+            this.marca = marca,
+                this.anno = anno
+        }
+
+        info() {
+            console.log(`Questa auto è una ${this.marca} del ${this.anno}`);
+        }
+    }
+
+    const aggMacchina = new Macchina("Fiat", 75);
+    aggMacchina.info();
+
+}
+
 // Imparare a estendere le classi.
 // Crea una classe Animale con proprietà:
 // nome: string
