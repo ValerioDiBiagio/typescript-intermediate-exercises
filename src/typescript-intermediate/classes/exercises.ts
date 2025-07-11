@@ -99,10 +99,34 @@
 // Override del metodo faVerso() per stampare: "Bau!"
 
 
+{
+
+    class Animale {
+        nome: string
 
 
+        constructor(nome: string) {
+            this.nome = nome
+        }
 
+        faVerso() {
+            console.log("L'animale fa un vero generico");
+        }
+    }
 
+    class Cane extends Animale {
+        faVerso(): void {
+            console.log("Baubau");
+        }
+    }
+
+    const postAnimale = new Animale("Luna");
+    postAnimale.faVerso();
+
+    const postCane = new Cane("Nerone");
+    postCane.faVerso();
+
+}
 
 // Accedere e modificare i dati tramite metodi.
 // Crea una classe Libro con una proprietà titolo.
