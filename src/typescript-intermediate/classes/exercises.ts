@@ -241,3 +241,25 @@
     console.log("Il secondo titolo è:")
     firstBook.showTitle()
 }
+
+// Crea una classe Account con una proprietà private password.
+// Crea un metodo checkPassword(input: string): boolean che ritorna true se la password corrisponde, false altrimenti.
+// Prova a leggere la password dall’esterno (dovrebbe dare errore).
+
+{
+    class Account {
+        private password: string
+
+
+        constructor(password: string) {
+            this.password = password
+        }
+
+        checkPassword(input: string): boolean {
+            return input === this.password
+        }
+    }
+
+    const myAccount = new Account("PasswordSegreta")
+    // console.log(myAccount.password)
+}
