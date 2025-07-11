@@ -293,3 +293,45 @@
     // console.log(postEmployee.ssn);
 
 }
+
+// Crea una classe User con:
+// una proprietà username pubblica
+// una proprietà email privata
+// una proprietà role protetta
+// Aggiungi un metodo getEmail() che restituisce l’email
+// Crea una sottoclasse Admin che estende User
+// Crea un metodo describeRole() che stampa il ruolo dell’utente
+// Crea un oggetto Admin, prova ad accedere a tutte le proprietà da fuori e verifica i risultati
+
+{
+    class User {
+        public username: string;
+        private email: string;
+        protected role: string
+
+        constructor(username: string, email: string, role: string) {
+            this.username = username
+            this.email = email
+            this.role = role
+        }
+
+        getEmail() {
+            return this.email
+        }
+    }
+
+    class Admin extends User {
+        describeRole(): void {
+            console.log(this.role);
+        }
+    }
+
+    const adminUser = new Admin("Mario", "sonomario@gmail.com", "Admin")
+    adminUser.describeRole()
+    console.log(adminUser.username);
+    console.log(adminUser.getEmail());
+
+
+
+
+}
