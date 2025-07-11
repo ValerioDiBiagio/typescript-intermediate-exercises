@@ -7,34 +7,58 @@
 // // Crea un metodo saluta() che stampa: "Ciao, mi chiamo {nome} e ho {eta} anni".
 
 
-class Persona {
-    nome: string;
-    eta: number
+{
+    class Persona {
+        nome: string;
+        eta: number
 
 
-    constructor(nome: string, eta: number) {
-        this.nome = nome
-        this.eta = eta
+        constructor(nome: string, eta: number) {
+            this.nome = nome
+            this.eta = eta
+        }
+
+        saluta() {
+            console.log(`Ciao, mi chiamo ${this.nome} e ho ${this.eta} anni`)
+        }
     }
 
-    saluta() {
-        console.log(`Ciao, mi chiamo ${this.nome} e ho ${this.eta} anni`)
-    }
+    const aggiungiPersona = new Persona("Luca", 35);
+    aggiungiPersona.saluta();
 }
-
-const aggiungiPersona = new Persona("Luca", 35);
-aggiungiPersona.saluta();
-
-
-
 
 // Usare metodi per modificare lo stato interno.
 // Aggiungi alla classe Persona un metodo:
 // invecchia(anni: number) che aumenta l'età della persona.
 
 
+{
+    class Persona {
+        nome: string;
+        eta: number
 
 
+        constructor(nome: string, eta: number) {
+            this.nome = nome
+            this.eta = eta
+        }
+
+        saluta() {
+            console.log(`Ciao, mi chiamo ${this.nome} e ho ${this.eta} anni`)
+        }
+
+        invecchia(anni: number) {
+            this.eta = this.eta + anni
+        }
+    }
+
+    const aggiungiPersona = new Persona("Luca", 35);
+    aggiungiPersona.saluta();
+
+    aggiungiPersona.invecchia(5)
+    aggiungiPersona.saluta();
+
+}
 
 // Imparare a estendere le classi.
 // Crea una classe Animale con proprietà:
