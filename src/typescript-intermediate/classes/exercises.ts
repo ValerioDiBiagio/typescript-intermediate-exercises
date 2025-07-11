@@ -206,3 +206,38 @@
     console.log("Il secondo libro è:", primoLibro.getTitolo())
 
 }
+
+// Crea una classe Book con una proprietà title dichiarata public.
+// Crea un metodo showTitle() che stampa il titolo.
+// Istanzia la classe, modifica il titolo dall’esterno e stampa il titolo prima e dopo la modifica.
+
+{
+    class Book {
+        public title: string
+
+
+        constructor(title: string) {
+            this.title = title
+        }
+
+
+        showTitle(): void {
+            console.log(`${this.title}`);
+        }
+
+        newTitolo(newTitle: string): void {
+            this.title = newTitle
+
+        }
+    }
+
+    const firstBook = new Book("Foto dal Futuro")
+    firstBook.showTitle()
+    console.log("Il primo titolo è:")
+    firstBook.showTitle()
+
+
+    firstBook.newTitolo("Foto dal Futuro N2")
+    console.log("Il secondo titolo è:")
+    firstBook.showTitle()
+}
