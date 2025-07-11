@@ -7,7 +7,8 @@
     "build": "tsc",
     "e1": "node dist/typescript-intermediate/modules/exercises.js",
     "e2": "node dist/typescript-intermediate/interface/exercises.js",
-    "e3": "node dist/typescript-intermediate/type-guards-narrowing/exercises.js"
+    "e3": "node dist/typescript-intermediate/type-guards-narrowing/exercises.js",
+    "e4": "node dist/typescript-intermediate/classes/exercises.js"
   },
   "keywords": [],
   "author": "",

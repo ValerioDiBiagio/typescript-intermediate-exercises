@@ -52,20 +52,20 @@ const prodottoValido: Prodotto = {
 // Crea un oggetto Impiegato valido.
 
 
-interface Persona {
-    nome: string,
-}
+// interface Persona {
+//     nome: string,
+// }
 
-interface Impiegato extends Persona {
-    ruolo: string
-}
+// interface Impiegato extends Persona {
+//     ruolo: string
+// }
 
-const impiegatoValido: Impiegato = {
-    nome: "Stefano",
-    ruolo: "Banchista"
-}
+// const impiegatoValido: Impiegato = {
+//     nome: "Stefano",
+//     ruolo: "Banchista"
+// }
 
-console.log(impiegatoValido);
+// console.log(impiegatoValido);
 
 // Crea un’interfaccia UtenteBase con:
 // id: number (readonly)
