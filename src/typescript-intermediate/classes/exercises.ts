@@ -128,6 +128,46 @@
 
 }
 
+// Crea una classe Instrument con una proprietà:
+// name (string)
+// Nel costruttore inizializza name.
+// Aggiungi un metodo play() che stampa:
+// "Lo strumento suona una melodia generica."
+// Crea una sottoclasse Piano che estende Instrument.
+// Override il metodo play() nella classe Piano per stampare:
+// "Il piano suona note dolci e armoniose."
+// Crea un’istanza di Instrument e una di Piano e chiama il metodo play() su entrambe.
+
+
+{
+    class Instrument {
+        nome: string
+
+
+        constructor(nome: string) {
+            this.nome = nome
+        }
+
+        play() {
+            console.log("Lo strumento suona una melodia generica");
+        }
+    }
+
+    class Piano extends Instrument {
+        play(): void {
+            console.log("Il piano suona noti dolci e armoniose")
+        }
+
+    }
+
+    const postInstrument = new Instrument("Violino");
+    postInstrument.play();
+
+    const postPiano = new Piano("Piano");
+    postPiano.play();
+}
+
+
 // Accedere e modificare i dati tramite metodi.
 // Crea una classe Libro con una proprietà titolo.
 // Includi un costruttore che inizializza il titolo.
