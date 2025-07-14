@@ -330,8 +330,82 @@
     adminUser.describeRole()
     console.log(adminUser.username);
     console.log(adminUser.getEmail());
-
-
-
-
 }
+
+
+// Crea una classe Product con le proprietà name e price.
+// Estendi la classe con una sottoclasse Book, aggiungendo la proprietà author.
+// Usa super per richiamare il costruttore del genitore.
+// Aggiungi un metodo info() in entrambe le classi.
+
+{
+
+    class Product {
+        name: string;
+        price: number
+
+        constructor(name: string, price: number) {
+            this.name = name,
+                this.price = price
+        }
+
+        info(): string {
+            return `Prodotto: ${this.name}, Prezzo: €${this.price.toFixed(2)}`;
+        }
+    }
+
+    class Book extends Product {
+        author: string
+
+        constructor(name: string, price: number, author: string) {
+            super(name, price),
+                this.author = author
+        }
+
+        info(): string {
+            return `Libro: ${this.name}, Autore: ${this.author}, Prezzo: €${this.price.toFixed(2)}`;
+        }
+    }
+
+    const myProduct = new Product("Smart TV 55 pollici", 499.99);
+    console.log(myProduct.info());
+
+    const myBook = new Book("Cent'anni di solitudine", 18.75, "Gabriel García Márquez");
+    console.log(myBook.info());
+
+    console.log(myBook instanceof Book);
+    console.log(myBook instanceof Product);
+}
+
+// Crea una classe Animal con un metodo speak().
+// Crea una sottoclasse Cat che estende Animal, e sovrascrive il metodo speak() utilizzando  super.speak() prima di stampare "Miao!".
+
+
+
+// Crea una classe Vehicle che rappresenta un veicolo generico. Questa classe deve avere:
+// Una proprietà protetta chiamata wheels, che rappresenta il numero di ruote del veicolo.
+// Un costruttore che permetta di impostare il numero di ruote al momento della creazione di un'istanza della classe.
+// Un metodo chiamato describe(), che stampi un messaggio indicando quante ruote ha il veicolo.
+// Crea una sottoclasse Bicycle che estende la classe Vehicle. La classe Bicycle deve:
+// Usare il costruttore della classe base Vehicle tramite il comando super
+// per impostare il numero di ruote a 2 (tipico per una bicicletta).
+// Avere un metodo describe() che chiama il metodo describe() della classe base (super.describe())  per stampare prima il numero di ruote e poi aggiungere una descrizione specifica.
+
+
+
+// Crea tre classi: Person, Employee, Manager.
+// Person ha name e un metodo describe().
+// Employee estende Person e aggiunge jobTitle, sovrascrivendo describe() usando super.describe().
+// Manager estende Employee e aggiunge department, sovrascrivendo describe() usando super.describe().
+
+
+
+// Crea una classe base Instrument con:
+// una proprietà protetta name (string)
+// un metodo pubblico describe() che stampa un messaggio con il nome dello strumento
+// Crea una sottoclasse StringInstrument che estende Instrument, aggiungendo:
+// una proprietà privata numberOfStrings (number)
+// un metodo pubblico describe() che sovrascrive il metodo base, chiamando super.describe() e stampa il numero di corde.
+// Crea una sottoclasse Guitar che estende StringInstrument, aggiungendo:
+// una proprietà pubblica isElectric (boolean)
+// un metodo pubblico describe() che sovrascrive il metodo base, chiamando super.describe() e poi stampa se è elettrica o acustica. 
