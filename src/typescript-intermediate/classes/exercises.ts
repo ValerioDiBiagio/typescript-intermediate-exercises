@@ -381,6 +381,44 @@
 // Crea una sottoclasse Cat che estende Animal, e sovrascrive il metodo speak() utilizzando  super.speak() prima di stampare "Miao!".
 
 
+{
+    class Animal {
+        verse: string
+
+        constructor(verse: string) {
+            this.verse = verse
+        }
+
+        speak(): string {
+            return `Il verso dell'animale è ${this.verse}`
+        }
+
+    }
+
+    class Cat extends Animal {
+
+
+        constructor(verse: string) {
+            super(verse)
+        }
+
+
+        speak(): string {
+
+            const animalVerse = super.speak()
+            return `${animalVerse}. Il gatto fa: Miao!`;
+        }
+    }
+
+    const myAnimal = new Animal("Bau!")
+    console.log(myAnimal.speak());
+
+    const myCat = new Cat("Miao!")
+    console.log(myCat.speak())
+
+}
+
+
 
 // Crea una classe Vehicle che rappresenta un veicolo generico. Questa classe deve avere:
 // Una proprietà protetta chiamata wheels, che rappresenta il numero di ruote del veicolo.
