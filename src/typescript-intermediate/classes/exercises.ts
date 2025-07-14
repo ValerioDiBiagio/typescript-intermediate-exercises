@@ -522,11 +522,7 @@
     const postManager = new Manager("Stefano", "Impiegato", 5);
     console.log(postManager.describe());
 
-
-
 }
-
-
 
 // Crea una classe base Instrument con:
 // una proprietà protetta name (string)
@@ -537,3 +533,55 @@
 // Crea una sottoclasse Guitar che estende StringInstrument, aggiungendo:
 // una proprietà pubblica isElectric (boolean)
 // un metodo pubblico describe() che sovrascrive il metodo base, chiamando super.describe() e poi stampa se è elettrica o acustica. 
+
+
+{
+    class Instrument {
+        protected name: string
+
+        constructor(name: string) {
+            this.name = name
+        }
+
+        describe() {
+            return `Lo strumento si chiama ${this.name}.`
+        }
+    }
+
+    class StringInstrument extends Instrument {
+        private numberOfStrings: number
+
+        constructor(name: string, numberOfStrings: number) {
+            super(name)
+            this.numberOfStrings = numberOfStrings
+        }
+
+        describe(): string {
+            const newNumberOfStrings = super.describe()
+            return `${newNumberOfStrings} Il numero di corde è ${this.numberOfStrings}.`
+        }
+    }
+    class Guitar extends StringInstrument {
+        isElectric: boolean
+
+        constructor(name: string, numberOfStrings: number, isElectric: boolean) {
+            super(name, numberOfStrings)
+            this.isElectric = isElectric
+        }
+
+        describe(): string {
+            const typeOfGuitar = super.describe()
+            return `${typeOfGuitar} E' elettrica? ${this.isElectric}. `
+        }
+    }
+
+    const postInstrument = new Instrument("Violino");
+    console.log(postInstrument.describe());
+
+    const postNumberOfStrings = new StringInstrument("Chitarra", 10);
+    console.log(postNumberOfStrings.describe());
+
+    const postGuitar = new Guitar("Chitarra", 8, true);
+    console.log(postGuitar.describe());
+
+}
