@@ -418,8 +418,6 @@
 
 }
 
-
-
 // Crea una classe Vehicle che rappresenta un veicolo generico. Questa classe deve avere:
 // Una proprietà protetta chiamata wheels, che rappresenta il numero di ruote del veicolo.
 // Un costruttore che permetta di impostare il numero di ruote al momento della creazione di un'istanza della classe.
@@ -430,6 +428,42 @@
 // Avere un metodo describe() che chiama il metodo describe() della classe base (super.describe())  per stampare prima il numero di ruote e poi aggiungere una descrizione specifica.
 
 
+{
+    class Vehicle {
+        protected wheels: number;
+
+
+
+        constructor(wheels: number) {
+            this.wheels = wheels
+        }
+
+        describe(): string {
+            return `Questo veicolo ha ${this.wheels} ruote`
+
+        }
+    }
+
+    class Bicycle extends Vehicle {
+
+
+        constructor() {
+            super(2)
+        }
+
+        describe(): string {
+
+            const description = super.describe()
+            return `${description}. E' una bicicletta blu`;
+        }
+    }
+
+    const car = new Vehicle(4);
+    console.log(car.describe());
+
+    const bike = new Bicycle();
+    console.log(bike.describe());
+}
 
 // Crea tre classi: Person, Employee, Manager.
 // Person ha name e un metodo describe().
