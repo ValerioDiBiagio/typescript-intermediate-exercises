@@ -11,8 +11,12 @@
 // Hai una variabile numero di tipo any che contiene un numero.
 // Usa una type assertion per trattarla come number e stampane il valore.
 
+{
+    const numero: any = 9;
+    const valoreNumero: number = (numero as number);
 
-
+    console.log(valoreNumero);
+}
 
 // Hai una variabile qualcosa di tipo unknown che contiene una stringa.
 // Usa una type assertion per trattarla come string e stampa la sua lunghezza.
