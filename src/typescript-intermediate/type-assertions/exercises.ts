@@ -34,12 +34,20 @@
 // Usa una type assertion per trattarlo come HTMLInputElement e imposta il valore del campo input a "Mario".
 
 {
-    const htlmElement = document.createElement("input");
-    const inputElement = htlmElement as HTMLInputElement
-    inputElement.value = "Mario";
-    console.log(inputElement.value);
+    // const htlmElement = document.createElement("input");
+    // const inputElement = htlmElement as HTMLInputElement
+    // inputElement.value = "Mario";
+    // console.log(inputElement.value);
 
 }
 
 // Hai un oggetto vuoto che stai "forzando" a essere del tipo { nome: string }.
 // Usa la type assertion per dichiarare il tipo, poi assegna un valore al campo nome e stampalo.
+
+{
+
+    const oggetto = {} as { nome: string };
+    oggetto.nome = "Mauro";
+    console.log(oggetto.nome);
+
+}
