@@ -470,6 +470,62 @@
 // Employee estende Person e aggiunge jobTitle, sovrascrivendo describe() usando super.describe().
 // Manager estende Employee e aggiunge department, sovrascrivendo describe() usando super.describe().
 
+{
+    class Person {
+        name: string
+
+        constructor(name: string) {
+            this.name = name
+        }
+
+        describe(): string {
+            return `Questa persona si chiama ${this.name}`
+
+        }
+    }
+
+    class Employee extends Person {
+        jobTitle: string
+
+        constructor(name: string, jobTile: string) {
+            super(name)
+            this.jobTitle = jobTile
+        }
+
+        describe(): string {
+            const newDescription = super.describe()
+            return `${newDescription} ed è un ${this.jobTitle}.`
+        }
+
+    }
+
+    class Manager extends Employee {
+        department: number
+
+        constructor(name: string, jobTitle: string, department: number) {
+            super(name, jobTitle)
+            this.department = department
+        }
+
+        describe(): string {
+            const newSecondDescription = super.describe()
+            return `${newSecondDescription} Gestisce il dipartimento numero ${this.department}.`
+        }
+    }
+
+    const postPerson = new Person("Luca");
+    console.log(postPerson.describe());
+
+    const postEmployee = new Employee("Mario", "Archivista");
+    console.log(postEmployee.describe());
+
+    const postManager = new Manager("Stefano", "Impiegato", 5);
+    console.log(postManager.describe());
+
+
+
+}
+
 
 
 // Crea una classe base Instrument con:
