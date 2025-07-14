@@ -21,8 +21,14 @@
 // Hai una variabile qualcosa di tipo unknown che contiene una stringa.
 // Usa una type assertion per trattarla come string e stampa la sua lunghezza.
 
+{
 
+    const qualcosa: unknown = "Mi chiamo Luca";
+    const lunghezzQualcosa: number = (qualcosa as string).length
 
+    console.log(lunghezzQualcosa);
+
+}
 
 // Hai un elemento HTML creato con document.createElement("input").
 // Usa una type assertion per trattarlo come HTMLInputElement e imposta il valore del campo input a "Mario".
