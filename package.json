@@ -9,7 +9,8 @@
     "e2": "node dist/typescript-intermediate/interface/exercises.js",
     "e3": "node dist/typescript-intermediate/type-guards-narrowing/exercises.js",
     "e4": "node dist/typescript-intermediate/classes/exercises.js",
-    "e5": "node dist/typescript-intermediate/type-assertions/exercises.js"
+    "e5": "node dist/typescript-intermediate/type-assertions/exercises.js",
+    "e6": "node dist/typescript-intermediate/generics/exercises.js"
   },
   "keywords": [],
   "author": "",
