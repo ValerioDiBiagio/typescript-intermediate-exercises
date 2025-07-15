@@ -585,3 +585,45 @@
     console.log(postGuitar.describe());
 
 }
+
+// Crea una classe Dog con una proprietà name.
+// Crea una funzione isDog che prende un oggetto e restituisce true se è un'istanza di Dog, altrimenti false.
+// Testa la funzione con due oggetti: uno Dog, uno normale.
+
+{
+    class Dog {
+        nome: string
+
+
+        constructor(nome: string) {
+            this.nome = nome
+        }
+    }
+
+    function isDog(object: any): boolean {
+        return object instanceof Dog;
+    }
+
+    const firstDog = new Dog("Nerone");
+    console.log(firstDog.nome);
+
+    const secondDog = { nome: "Fido" };
+
+    console.log(isDog(firstDog));
+    console.log(isDog(secondDog));
+
+}
+
+// Crea una classe base Animal e una classe derivata Cat.
+// Crea un oggetto oliver di tipo Cat.
+// Verifica con instanceof se oliver è un Cat e anche un Animal.
+
+
+
+
+
+
+
+// Crea due classi: Admin e User, entrambe con una proprietà name.
+// Scrivi una funzione printUserInfo che riceve user: Admin | User.
+// Se è un Admin, stampa "Admin: <name>", altrimenti "User: <name>", usando instanceof.
