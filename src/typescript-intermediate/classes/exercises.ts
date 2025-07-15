@@ -618,6 +618,45 @@
 // Crea un oggetto oliver di tipo Cat.
 // Verifica con instanceof se oliver è un Cat e anche un Animal.
 
+{
+    class Animal {
+        nome: string
+
+        constructor(nome: string) {
+            this.nome = nome
+        }
+
+    }
+
+    class Cat extends Animal {
+        nome: string
+
+
+        constructor(nome: string) {
+            super(nome)
+            this.nome = nome
+        }
+    }
+
+    function isAnimal(object: any): boolean {
+        return object instanceof Animal
+    }
+
+    function isCat(object: any): boolean {
+        return object instanceof Cat
+    }
+
+    const oliver = new Cat("Oliver");
+    console.log(oliver.nome);
+
+    console.log(`Oliver è un gatto? ${isCat(oliver)}`);
+    console.log(`Oliver è un animale? ${isAnimal(oliver)}`);
+
+}
+
+
+
+
 
 
 
