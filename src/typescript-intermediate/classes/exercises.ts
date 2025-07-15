@@ -654,15 +654,42 @@
 
 }
 
-
-
-
-
-
-
-
-
-
 // Crea due classi: Admin e User, entrambe con una proprietà name.
 // Scrivi una funzione printUserInfo che riceve user: Admin | User.
 // Se è un Admin, stampa "Admin: <name>", altrimenti "User: <name>", usando instanceof.
+
+{
+    class Admin {
+        name: string
+
+
+        constructor(name: string) {
+            this.name = name
+        }
+    }
+
+    class User {
+        name: string
+
+        constructor(name: string) {
+            this.name = name
+        }
+    }
+
+    function printUserInfo(user: Admin | User) {
+        if (user instanceof Admin) {
+            console.log(`Admin: ${user.name}`)
+        } else {
+            console.log(`User: ${user.name}`)
+        }
+    }
+
+    const postAdmin = new Admin("Luca");
+    printUserInfo(postAdmin);
+
+    const postUser = new User("Marco");
+    printUserInfo(postUser);
+
+
+}
+
