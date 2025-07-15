@@ -27,9 +27,26 @@
 }
 
 
-
 // Definisci un'interfaccia Box<T> che abbia una proprietà value di tipo T.
 // Crea due variabili: stringBox (con string) e numberBox (con number).
+
+{
+    interface Box<T> {
+        value: T
+    }
+
+    const stringBox: Box<string> = {
+        value: "Ciao, mi chiamo Luigi"
+    }
+
+    const numberBox: Box<number> = {
+        value: 10
+    }
+
+    console.log(stringBox.value);
+    console.log(numberBox.value);
+
+}
 
 
 
