@@ -75,3 +75,31 @@
     console.log(makePair(true, "Mario"));
 
 }
+
+// Crea un tipo generico KeyValue<K, V> che rappresenta un oggetto con:
+// una proprietà key di tipo K
+// una proprietà value di tipo V
+// Crea una funzione chiamata createKeyValue che:
+// accetta due parametri generici k: K e v: V
+// restituisce un oggetto { key: k, value: v } del tipo KeyValue<K, V>
+// Testa la funzione con:
+// una stringa e un numero
+// un numero e un booleano
+// una stringa e un array
+
+
+{
+    type KeyValue<K, V> = {
+        key: K;
+        value: V
+    }
+
+    function createKeyValue<K, V>(k: K, v: V): KeyValue<K, V> {
+        return { key: k, value: v }
+    }
+
+    console.log(createKeyValue("Ciao", 3));
+    console.log(createKeyValue(8, true));
+    console.log(createKeyValue("Come stai?", ["Mela", "Pera"]));
+
+}
