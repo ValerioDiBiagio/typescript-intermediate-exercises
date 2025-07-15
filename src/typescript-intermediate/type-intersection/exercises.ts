@@ -145,69 +145,71 @@
 // id, name, email, telefono, se è admin e se può modificare.
 
 
-{
-    type BasicInfo = {
-        id: number;
-        name: string
-    }
 
-    type Contact = {
-        email: string;
-        phone: string
-    }
+type BasicInfo = {
+    id: number;
+    name: string
+}
 
-    type Role = {
-        isAdmin: boolean;
-        canEdit: boolean
-    }
+type Contact = {
+    email: string;
+    phone: string
+}
+
+type Role = {
+    isAdmin: boolean;
+    canEdit: boolean
+}
 
 
-    type FullUser = BasicInfo & Contact & Role;
+type FullUser = BasicInfo & Contact & Role;
 
-    const firstArray: FullUser[] = [
-        {
-            id: 1,
-            name: "Luca",
-            email: "luca@gmail.com",
-            phone: "3458759032",
-            isAdmin: true,
-            canEdit: true
-        },
+const firstArray: FullUser[] = [
+    {
+        id: 1,
+        name: "Luca",
+        email: "luca@gmail.com",
+        phone: "3458759032",
+        isAdmin: true,
+        canEdit: true
+    },
 
-        {
-            id: 2,
-            name: "Stefano",
-            email: "stefano@gmail.com",
-            phone: "3445659032",
-            isAdmin: true,
-            canEdit: false
-        },
+    {
+        id: 2,
+        name: "Stefano",
+        email: "stefano@gmail.com",
+        phone: "3445659032",
+        isAdmin: true,
+        canEdit: false
+    },
 
-        {
-            id: 1,
-            name: "Mario",
-            email: "mario@gmail.com",
-            phone: "3458759987",
-            isAdmin: false,
-            canEdit: true
-
-        }
-    ]
-
-    function printUserDetails(array: FullUser[]): void {
-        array.forEach(element => console.log(`Id: ${element.id}, nome: ${element.name}, email: ${element.email}, phone: ${element.phone}, admin? ${element.isAdmin}, si può modificare? ${element.canEdit}`))
+    {
+        id: 1,
+        name: "Mario",
+        email: "mario@gmail.com",
+        phone: "3458759987",
+        isAdmin: false,
+        canEdit: true
 
     }
+]
 
-    printUserDetails(firstArray);
+function printUserDetails(array: FullUser[]): void {
+    array.forEach(element => console.log(`Id: ${element.id}, nome: ${element.name}, email: ${element.email}, phone: ${element.phone}, admin? ${element.isAdmin}, si può modificare? ${element.canEdit}`))
 
 }
+
+printUserDetails(firstArray);
+
+
 
 // Usa il tipo FullUser dell’esercizio precedente.
 // Scrivi una funzione getAdmins che prende un array di FullUser e restituisce solo gli utenti con isAdmin === true.
 // Usa getAdmins per filtrare gli admin e stampare solo il nome e l'email.
 
-{
-
-
+function getAdmins(array: FullUser[]) {
+    return array.filter(element => element.isAdmin === true);
 }
+console.log(getAdmins(firstArray))
+
+getAdmins(firstArray.filter(element => console.log(element.name, element.email)));
