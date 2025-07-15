@@ -48,9 +48,30 @@
 
 }
 
+// Crea un tipo generico chiamato Pair<T, U>, che rappresenta una coppia di valori:
+// uno chiamato first
+// uno chiamato second
+// T è il tipo del primo valore
+// U è il tipo del secondo valore
+// Crea una funzione chiamata makePair che:
+// accetta due parametri generici a: T e b: U
+// restituisce un oggetto { first: a, second: b } del tipo Pair<T, U>
+// Usa la funzione con tipi diversi, per esempio:
+// una stringa e un numero
+// un booleano e una stringa
+// due numeri
+{
+    type Pair<T, U> = {
+        first: T;
+        second: U
+    }
 
+    function makePair<T, U>(a: T, b: U): Pair<T, U> {
+        return { first: a, second: b }
 
+    }
 
-// Crea un tipo Pair<T, U> che rappresenta una coppia di valori (first e second).
-// Crea una funzione makePair che restituisce un oggetto di tipo Pair<T, U>.
-// Usala con diverse combinazioni di tipi.
+    console.log(makePair("Luca", 4));
+    console.log(makePair(true, "Mario"));
+
+}
