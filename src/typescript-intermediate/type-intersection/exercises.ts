@@ -135,3 +135,79 @@
 
 }
 
+// Crea tre tipi:
+// BasicInfo con proprietà id: number e name: string
+// Contact con proprietà email: string e phone: string
+// Role con proprietà isAdmin: boolean e canEdit: boolean
+// Crea un tipo FullUser come intersezione tra BasicInfo, Contact e Role.
+// Crea un array di FullUser con almeno 3 utenti.
+// Scrivi una funzione printUserDetails che prende un array di FullUser e stampa per ogni utente:
+// id, name, email, telefono, se è admin e se può modificare.
+
+
+{
+    type BasicInfo = {
+        id: number;
+        name: string
+    }
+
+    type Contact = {
+        email: string;
+        phone: string
+    }
+
+    type Role = {
+        isAdmin: boolean;
+        canEdit: boolean
+    }
+
+
+    type FullUser = BasicInfo & Contact & Role;
+
+    const firstArray: FullUser[] = [
+        {
+            id: 1,
+            name: "Luca",
+            email: "luca@gmail.com",
+            phone: "3458759032",
+            isAdmin: true,
+            canEdit: true
+        },
+
+        {
+            id: 2,
+            name: "Stefano",
+            email: "stefano@gmail.com",
+            phone: "3445659032",
+            isAdmin: true,
+            canEdit: false
+        },
+
+        {
+            id: 1,
+            name: "Mario",
+            email: "mario@gmail.com",
+            phone: "3458759987",
+            isAdmin: false,
+            canEdit: true
+
+        }
+    ]
+
+    function printUserDetails(array: FullUser[]): void {
+        array.forEach(element => console.log(`Id: ${element.id}, nome: ${element.name}, email: ${element.email}, phone: ${element.phone}, admin? ${element.isAdmin}, si può modificare? ${element.canEdit}`))
+
+    }
+
+    printUserDetails(firstArray);
+
+}
+
+// Usa il tipo FullUser dell’esercizio precedente.
+// Scrivi una funzione getAdmins che prende un array di FullUser e restituisce solo gli utenti con isAdmin === true.
+// Usa getAdmins per filtrare gli admin e stampare solo il nome e l'email.
+
+{
+
+
+}
