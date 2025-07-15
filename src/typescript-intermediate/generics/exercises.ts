@@ -1,17 +1,30 @@
 // Crea una funzione identity che prende un parametro di tipo generico T e lo restituisce.
 // Chiama la funzione con una stringa e con un numero.
 
-function identity<T>(arg: T): T {
-    return arg
+{
+
+    function identity<T>(arg: T): T {
+        return arg
+    }
+
+    console.log(identity("Ciao"));
+    console.log(identity(9));
 }
 
-console.log(identity("Ciao"));
-console.log(identity(9));
 
 
 // Scrivi una funzione getFirstElement<T> che accetta un array di tipo T[] e restituisce il primo elemento.
 // Testala con array di stringhe e numeri.
 
+{
+    function getFirstElement<T>(arr: T[]): T {
+        return arr[0];
+    }
+
+    console.log(getFirstElement(["Mela", "Banana", "Anguria"]));
+    console.log(getFirstElement([1, 2, 3, 4]));
+
+}
 
 
 
