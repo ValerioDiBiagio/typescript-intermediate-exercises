@@ -201,8 +201,6 @@ function printUserDetails(array: FullUser[]): void {
 
 printUserDetails(firstArray);
 
-
-
 // Usa il tipo FullUser dell’esercizio precedente.
 // Scrivi una funzione getAdmins che prende un array di FullUser e restituisce solo gli utenti con isAdmin === true.
 // Usa getAdmins per filtrare gli admin e stampare solo il nome e l'email.
